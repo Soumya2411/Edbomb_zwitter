@@ -12,6 +12,8 @@ import { register } from './controllers/auth.js';
 import authRouter from './routes/auth.js'
 import userRouter from './routes/user.js'
 import {verifyToken} from './middleware/authentication.js'
+import { createPost } from "./controllers/posts.js";
+import postRouter from './routes/posts.js'
 
 // CONFIGURATIONs
 const __filename = fileURLToPath(import.meta.url);
@@ -40,10 +42,11 @@ const upload = multer({storage});
 
 // ROUTESwithfiles
 app.post("/auth/register",upload.single("picture") ,register)
-app.post("/posts",verifyToken)
+app.post("/posts",verifyToken,upload.single("picture"),createPost)
 //ROUTES
 app.use("/auth",authRouter)
 app.use("/user",userRouter)
+app.use("/posts",postRouter)
 
 // MONGODBCONNECTION
 
