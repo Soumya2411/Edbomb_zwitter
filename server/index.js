@@ -10,6 +10,7 @@ import { fileURLToPath } from 'url';
 import helmet from 'helmet';
 import { register } from './controllers/auth.js';
 import authRouter from './routes/auth.js'
+import userRouter from './routes/user.js'
 
 // CONFIGURATIONs
 const __filename = fileURLToPath(import.meta.url);
@@ -41,6 +42,7 @@ app.post("/auth/register",upload.single("picture") ,register)
 
 //ROUTES
 app.use("/auth",authRouter)
+app.use("/user",userRouter)
 
 // MONGODBCONNECTION
 
