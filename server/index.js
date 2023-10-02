@@ -11,6 +11,7 @@ import helmet from 'helmet';
 import { register } from './controllers/auth.js';
 import authRouter from './routes/auth.js'
 import userRouter from './routes/user.js'
+import {verifyToken} from './middleware/authentication.js'
 
 // CONFIGURATIONs
 const __filename = fileURLToPath(import.meta.url);
@@ -39,7 +40,7 @@ const upload = multer({storage});
 
 // ROUTESwithfiles
 app.post("/auth/register",upload.single("picture") ,register)
-
+app.post("/posts",verifyToken)
 //ROUTES
 app.use("/auth",authRouter)
 app.use("/user",userRouter)
