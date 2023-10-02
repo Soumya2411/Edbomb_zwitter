@@ -9,6 +9,7 @@ import path from "path"
 import { fileURLToPath } from 'url';
 import helmet from 'helmet';
 import { register } from './controllers/auth.js';
+import authRouter from './routes/auth.js'
 
 // CONFIGURATIONs
 const __filename = fileURLToPath(import.meta.url);
@@ -39,7 +40,7 @@ const upload = multer({storage});
 app.post("/auth/register",upload.single("picture") ,register)
 
 //ROUTES
-app.use("/auth")
+app.use("/auth",authRouter)
 
 // MONGODBCONNECTION
 
