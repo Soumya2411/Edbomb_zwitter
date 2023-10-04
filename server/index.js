@@ -45,7 +45,7 @@ app.post("/auth/register",upload.single("picture") ,register)
 app.post("/posts",verifyToken,upload.single("picture"),createPost)
 //ROUTES
 app.use("/auth",authRouter)
-app.use("/user",userRouter)
+app.use("/users",userRouter)
 app.use("/posts",postRouter)
 
 // MONGODBCONNECTION

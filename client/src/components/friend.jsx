@@ -12,7 +12,6 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const { _id } = useSelector((state) => state.user);
   const token = useSelector((state) => state.token);
   const friends = useSelector((state) => state.user.friends);
-
   const { palette } = useTheme();
   const primaryLight = palette.primary.light;
   const primaryDark = palette.primary.dark;
@@ -36,6 +35,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     dispatch(setFriends({ friends: data }));
   };
 
+  console.log(friends);
   return (
     <FlexBetween>
       <FlexBetween gap="1rem">

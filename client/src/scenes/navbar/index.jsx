@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          ZWITTER
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
@@ -76,13 +76,6 @@ const Navbar = () => {
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <FlexBetween gap="2rem">
-          <IconButton onClick={() => dispatch(setMode())}>
-            {theme.palette.mode === "dark" ? (
-              <DarkMode sx={{ fontSize: "25px" }} />
-            ) : (
-              <LightMode sx={{ color: dark, fontSize: "25px" }} />
-            )}
-          </IconButton>
           <Message sx={{ fontSize: "25px" }} />
           <Notifications sx={{ fontSize: "25px" }} />
           <Help sx={{ fontSize: "25px" }} />
@@ -148,16 +141,6 @@ const Navbar = () => {
             alignItems="center"
             gap="3rem"
           >
-            <IconButton
-              onClick={() => dispatch(setMode())}
-              sx={{ fontSize: "25px" }}
-            >
-              {theme.palette.mode === "dark" ? (
-                <DarkMode sx={{ fontSize: "25px" }} />
-              ) : (
-                <LightMode sx={{ color: dark, fontSize: "25px" }} />
-              )}
-            </IconButton>
             <Message sx={{ fontSize: "25px" }} />
             <Notifications sx={{ fontSize: "25px" }} />
             <Help sx={{ fontSize: "25px" }} />
