@@ -8,4 +8,3 @@ const WidgetWrapper = styled(Box)(({ theme }) => ({
 }));
 
 export default WidgetWrapper;
-
