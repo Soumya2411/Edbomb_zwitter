@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          ZWITTER
+          SKILLCONNECT
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
