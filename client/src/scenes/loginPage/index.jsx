@@ -12,7 +12,7 @@ const LoginPage = () => {
         p="1rem 6%"
         textAlign="center"
       >
-        <Typography fontWeight="bold" fontSize="32px" color="primary">
+        <Typography fontWeight="bold" fontSize="32px" color="brown">
           SkillConnect
         </Typography>
       </Box>
@@ -22,9 +22,9 @@ const LoginPage = () => {
         p="2rem"
         m="2rem auto"
         borderRadius="1.5rem"
-        backgroundColor={theme.palette.background.alt}
+        backgroundColor="white"
       >
-        <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
+        <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }} color="black">
           Welcome to SkillConnect!
         </Typography>
         <Form />
